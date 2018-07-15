@@ -808,3 +808,11 @@ i:hover
 {
 	color:#fff;
 }
+a#repo_link:hover
+{
+	color:green;
+}
+a#repo_link
+{
+	color:#808080;
+}
