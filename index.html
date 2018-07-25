@@ -31,21 +31,23 @@
     min-height:100%;/*these make the opacity provider fill the screen*/
     opacity:0.4;
     filter:alpha(opacity=50);  
-    position:absolute;
+    position:relative;
      background:black;
   z-index:100;  
 }
 
 div.popup-data
-{
-    width:200px;
-    height:200px;
+{   
+    width:50%;
+    height:75%;
     display:none;
          background:white;
       z-index:101;   /*must be greater than the opacity provider*/   
     position:fixed;  
     top:100px; 
-    left:50%; /*centers the div*/
+  right: 20%;
+  left: 20%
+     /*centers the div*/
 }
 	</style>
 	
@@ -159,17 +161,18 @@ function beta_alert()
 				
 			</div>
 		</section>
-<a href="#"  style="position: fixed; float: right; right: 1em; bottom: 0em;right: 1em; z-index: 200; opacity: 1; font-weight:bolder" id="show">blockbot</a>
+<a href="#"  style="position: fixed; float: right; right: 1em; bottom: 0em;right: 1em; z-index: 200; opacity: 1; font-weight:bolder" id="show"><img style="height: 15%;width:15%;float:right;" src="img/chatbot_cropped.gif"></a>
 
-<div class="popup popup-data"  style="margin: auto;">
-   <iframe id="show"  width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/9e79784a-ec03-4db5-95a3-b35fcc81f8ef"></iframe>
-    <a href="#" id="close">Close</a>    
+<div class="popup popup-data" >
+	  
+   <iframe id="show"  style="width:100%;height:100%;left: 10%;" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/9e79784a-ec03-4db5-95a3-b35fcc81f8ef"></iframe>
+     <a href="#" id="close" style="align-items:center;">X</a> 
 </div>
 
 <div class="popup opacity-provider">
 
 </div>
-		
+	
 
 
 		<section class="padding bg-grey" id="current">
