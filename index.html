@@ -10,14 +10,49 @@
 		<meta name="keyword" content="BlockHead non profit organisation ayush shekhar ayush debjyoti guha debjyoti mvj college of engineering georgian bangalore bangalore startup bengaluru bengaluru startup project share engineering startup innovations">
 		<meta name="description" content="A non-profit organisation to help people work together on their dream project">
 		<title>BlockHead</title>
+
 		<link rel="stylesheet" href="ionicons/css/ionicons.min.css">
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 		<link rel="stylesheet" href="sweetalert/dist/sweetalert.css">
 		<link rel="stylesheet" href="css/stisla.css">
 		<link rel="shortcut icon" type="image/png" href="img/news/fav.png"/>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122312115-1"></script>
+	
+
+	<style type="text/css">
+		div.opacity-provider
+{
+    display:none;
+    top:0;
+    left:0;
+    min-width:100%;
+    min-height:100%;/*these make the opacity provider fill the screen*/
+    opacity:0.4;
+    filter:alpha(opacity=50);  
+    position:absolute;
+     background:black;
+  z-index:100;  
+}
+
+div.popup-data
+{
+    width:200px;
+    height:200px;
+    display:none;
+         background:white;
+      z-index:101;   /*must be greater than the opacity provider*/   
+    position:fixed;  
+    top:100px; 
+    left:50%; /*centers the div*/
+}
+	</style>
+	
+		
 <script type="text/javascript">
+
+	
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -28,11 +63,15 @@ function beta_alert()
 		alert("This is a Beta version. Thank You ");
 		
 	}
+	
+
+
 </script>
 		
 	</head>
 
 	<body>
+		
 		<nav class="navbar navbar-expand-lg main-navbar">
 			<div class="container-fluid">			
 			  <a class="navbar-brand" href="#">
@@ -48,11 +87,13 @@ function beta_alert()
 				  <div class="mr-auto"></div>
 			   
 			    <form class="form-inline">
+			    	
 				    <a href="javascript:beta_alert();" class="btn smooth-link align-middle btn-primary">Login/Sign Up</a>
 			    </form>
 			  </div>
 		  </div>
 		</nav>
+
 		<section class="hero bg-overlay" id="hero" data-bg="img/c1.gif">
 			<div class="text py-5">
 				<p class="lead">BLOCKHEAD</p>
@@ -64,6 +105,8 @@ function beta_alert()
 				</div>
 			</div>
 		</section>
+			
+	
 		
 		<section class="padding bg-grey" id="blog">
 			<div class="container">
@@ -116,6 +159,19 @@ function beta_alert()
 				
 			</div>
 		</section>
+<a href="#"  style="position: fixed; float: right; right: 1em; bottom: 0em;right: 1em; z-index: 200; opacity: 1; font-weight:bolder" id="show">blockbot</a>
+
+<div class="popup popup-data"  style="margin: auto;">
+   <iframe id="show"  width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/9e79784a-ec03-4db5-95a3-b35fcc81f8ef"></iframe>
+    <a href="#" id="close">Close</a>    
+</div>
+
+<div class="popup opacity-provider">
+
+</div>
+		
+
+
 		<section class="padding bg-grey" id="current">
 			<div class="container" >
 				<p class="lead" align="center">CURRENT OFFERINGS</p>
@@ -347,6 +403,8 @@ function beta_alert()
 
 
 		<footer>
+
+  
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-3 col-sm-12">
@@ -411,6 +469,8 @@ function beta_alert()
 			</div>
 				
 			</div>
+			
+  
 		</footer>
 
 		<script src="js/jquery.min.js"></script>
@@ -418,5 +478,20 @@ function beta_alert()
 		<script src="js/jquery.easeScroll.js"></script>
 		<script src="sweetalert/dist/sweetalert.min.js"></script>
 		<script src="js/stisla.js"></script>
+		<script type="text/javascript">
+			$(function() {
+    $("#show").click(function() {
+        $("div.popup").show();
+
+        return false;
+    });
+    $("#close").click(function() {
+        $("div.popup").hide();
+        return false;
+    });
+});
+		</script>
+		
+
 	</body>
 </html>
