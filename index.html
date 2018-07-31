@@ -21,6 +21,67 @@
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122312115-1"></script>
 	
 
+	<style type="text/css">
+		div.opacity-provider
+{
+    display:none;
+    top:0;
+    left:0;
+    min-width:100%;
+    min-height:100%;/*these make the opacity provider fill the screen*/
+    opacity:0.4;
+    filter:alpha(opacity=50);  
+    position:relative;
+     background:black;
+  z-index:100;  
+}
+
+div.popup-data
+{   
+    width:62%;
+    height:60%;
+    display:none;
+         background:white;
+      z-index:101;   /*must be greater than the opacity provider*/   
+    position:fixed;  
+    top:100px; 
+  right: 20%;
+  left: 20%;
+     /*centers the div*/
+
+}
+.creator_card ul
+{
+	margin-left:auto;
+	margin-right:auto; 
+}
+.creator_card ul li
+{
+	display:inline;
+	text-decoration: none;
+	padding-right: 5px;
+
+}
+.creator_card a
+{
+   color:grey;
+
+}
+.creator_card a:hover
+{
+	
+	padding-left: 0px;
+	color:#fff;
+	transform: scale(1.5);
+	
+}
+.creator_card i:hover
+{    color:#fff;
+	transform: scale(1.5);
+	
+}
+
+</style>
 	
 		
 <script type="text/javascript">
