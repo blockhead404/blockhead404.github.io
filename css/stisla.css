@@ -797,7 +797,8 @@ a:hover
 	color:#fff;
 	opacity:1;
 	text-overflow: hidden;
-	padding-left: 15px;
+	padding-left: 5px;
+	padding-right:5px;
 	text-decoration-line: none;
 }
 li
